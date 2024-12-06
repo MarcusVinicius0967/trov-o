@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            spinner: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' }
+            }
+          },
+          animation: {
+            spinner: 'spinner 0.1ms linear infinite'
+          }
+        }
+      }
+    }
+    </script>
+    <title>Document</title>
+</head>
+<body class="bg-gradient-to-r from-sky-600 to-yellow-400 flex justify-center items-center h-screen">
+    <main class="flex px-6 drop-shadow-2xl lg:w:3/4">
+        <section class="bg-black hidden lg:block w-1/2 rounded-lg lg:rounded-r-none">
+            <img class="m-auto w-10/12 h-100" src="raio (1).png" alt="">
+        </section>
+        <section class="bg-white p-10 flex flex-col gap-6 rounded-lg lg:w-1/2 justify-center lg:rounded-l-none">
+            <div class="flex self-center animate-spinner">
+                <img src="raio.png" alt="">
+            </div>
+            <div class="text-center">
+                <h1 class="text-4xl mb-2 font-mono">Equipe Trovão</h1>
+                <p class="text-xl mb-2 font-mono">Entre no melhor time de todos</p>
+                <p class="text-xl mb-2 font-mono">Feito através do <span class="text-sky-600 hover:text-4xl">TailWind</span></p>
+            </div>
+            <form>
+                <label class="text-base font-bold" for="email">Email</label>
+                <input class="text-base w-full mb-4 pl-3 rounded border p-2 focus:outline-none hover:border-yellow-500 capitalize" type="email" id="email" placeholder="Digite seu Email">
+                <button class="font-bold text-white bg-yellow-400 shadow-lg shadow-yellow-300 w-full py-2 rounded-full hover:bg-yellow-500 duration-150" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
